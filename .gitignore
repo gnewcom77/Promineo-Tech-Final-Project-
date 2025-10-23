@@ -1,11 +1,2 @@
-/target/
-*.log
-.classpath
-.project
+target/
 .settings/
-/.idea/
-*.iml
-/bin/
-.DS_Store
-Thumbs.db
-application.yaml

@@ -1,13 +1,25 @@
+//pepper is contributor
+
 package pepper.boss.entity;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
+
 
 @Data
 @Entity
@@ -30,39 +42,11 @@ public class Pepper {
 	@Column(length = 500)
 	private String notes;
 	
-	/*
-	public Long getPepperId() {
-		return pepperId;
-	}
+	@EqualsAndHashCode.Exclude
+	@ToString.Exclude
+	@OneToMany(mappedBy = "pepper", cascade = CascadeType.ALL)
+	@JsonManagedReference
+	private Set<Sauce> sauces = new HashSet<>();
 	
-	public void setPepperId(Long pepperId) {
-		this.pepperId = pepperId;
-	}
 	
-	public String getName() {
-		return name;
-	}
-	
-	public void setName(String name) {
-		this.name = name;
-	}
-	
-	public String getHeatLevel() {
-		return heatLevel;
-	}
-	
-	public void setHeatLevel(String heatLevel) {
-		this.heatLevel = heatLevel;
-	}
-	
-	public String getNotes() {
-		return notes;
-	}
-	
-	public void setNotes(String notes) {
-		this.notes = notes;
-	}
-*/
-
-
 }
