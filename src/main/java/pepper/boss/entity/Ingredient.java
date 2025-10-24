@@ -5,6 +5,8 @@ package pepper.boss.entity;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -36,6 +38,7 @@ public class Ingredient {
 
 	@EqualsAndHashCode.Exclude
 	@ToString.Exclude
+//	@JsonBackReference
 	@ManyToMany(mappedBy = "ingredients")
 	private Set<Sauce> sauces = new HashSet<>();
 }

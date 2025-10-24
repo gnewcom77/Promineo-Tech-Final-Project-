@@ -20,11 +20,11 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import pepper.boss.dao.PepperDao;
 import pepper.boss.dao.SauceDao;
-import pepper.boss.dto.SauceDTO;
 import pepper.boss.entity.Pepper;
 import pepper.boss.entity.Sauce;
 import pepper.boss.error.ResourceNotFoundException;
 import pepper.boss.mapper.EntityMapper;
+import pepper.boss.controller.DTO.SauceDTO;
 import pepper.boss.dao.IngredientDao;
 import pepper.boss.entity.Ingredient;
 

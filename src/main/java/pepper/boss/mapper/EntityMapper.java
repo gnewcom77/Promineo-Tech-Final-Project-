@@ -2,9 +2,9 @@ package pepper.boss.mapper;
 
 import java.util.stream.Collectors;
 
-import pepper.boss.dto.IngredientDTO;
-import pepper.boss.dto.PepperDTO;
-import pepper.boss.dto.SauceDTO;
+import pepper.boss.controller.DTO.IngredientDTO;
+import pepper.boss.controller.DTO.PepperDTO;
+import pepper.boss.controller.DTO.SauceDTO;
 import pepper.boss.entity.Ingredient;
 import pepper.boss.entity.Pepper;
 import pepper.boss.entity.Sauce;

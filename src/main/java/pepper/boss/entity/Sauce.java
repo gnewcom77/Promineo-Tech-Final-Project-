@@ -1,4 +1,4 @@
-//sauce = petpark
+
 
 package pepper.boss.entity;
 
@@ -6,6 +6,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -56,6 +57,7 @@ public class Sauce {
 
 	@EqualsAndHashCode.Exclude
 	@ToString.Exclude
+//	@JsonManagedReference
 	@ManyToMany(cascade = CascadeType.PERSIST)
 	@JoinTable(name = "sauce_ingredient", joinColumns = @JoinColumn(name = "sauce_id"), inverseJoinColumns = @JoinColumn(name = "ingredient_id"))
 	private Set<Ingredient> ingredients = new HashSet<>();

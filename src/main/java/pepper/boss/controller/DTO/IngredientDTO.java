@@ -1,4 +1,4 @@
-package pepper.boss.dto;
+package pepper.boss.controller.DTO;
 
 public class IngredientDTO {
 	private Long ingredientId;

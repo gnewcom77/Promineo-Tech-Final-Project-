@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.http.HttpStatus;
 
 import jakarta.validation.Valid;
+import pepper.boss.controller.DTO.PepperDTO;
 import pepper.boss.dao.PepperDao;
-import pepper.boss.dto.PepperDTO;
 import pepper.boss.entity.Pepper;
 import pepper.boss.error.ResourceNotFoundException;
 import pepper.boss.mapper.EntityMapper;
